@@ -1,15 +1,19 @@
 {
-  "name": "console.love",
-  "version": "1.0.0",
-  "description": "",
-  "main": ".eleventy.js",
-  "scripts": {
-    "serve": "npx eleventy --serve"
-  },
-  "author": "Maël Brunet",
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.5.4",
-    "html-minifier": "^3.5.20"
-  }
+	"name": "console.love",
+	"version": "1.0.0",
+	"description": "",
+	"main": ".eleventy.js",
+	"scripts": {
+		"serve": "npx eleventy --serve",
+		"build": "eleventy",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d _site --branch gh-pages --dotfiles"
+	},
+	"author": "Maël Brunet",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"html-minifier": "^3.5.20",
+		"gh-pages": "^6.3.0"
+	}
 }
